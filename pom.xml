@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-  <groupId>com.coveros.demo</groupId>
-  <artifactId>helloworld</artifactId>
-  <version>1.1</version>
-  <packaging>jar</packaging>
-  <version>1.0.${revision}</version>
+    <modelVersion>4.0.0</modelVersion>
 
-  <name>Hello World</name>
-  <description>The most basic of Java programs.</description>
-  <url>https://www.coveros.com/</url>
-  <inceptionYear>2018</inceptionYear>
+    <groupId>xyz.tomd</groupId>
+    <artifactId>simple-camel-app</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0.${revision}</version>
+
+    <name>Simple Camel App</name>
+    <description>A simple Camel app for testing and playing around with</description>
+
+    <!-- Required for Maven Release Plugin to work -->
+    <scm>
+        <developerConnection>scm:git:git@github.com:monodot/simple-camel-app.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -24,9 +28,11 @@
 
         <jkube.version>1.0.2</jkube.version>
 
+        <!-- Red Hat Fuse 7.8 on Spring Boot 2.x equivalent -->
         <spring.boot-version>2.3.4.RELEASE</spring.boot-version>
         <camel.version>2.23.2</camel.version>
 
+        <!-- A sensible default for the 'revision' property when running a local build -->
         <revision>0-SNAPSHOT</revision>
     </properties>
 
